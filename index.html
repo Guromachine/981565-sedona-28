@@ -16,7 +16,7 @@
 				<li><a href="blank.html">Карта штата</a></li>
 				<li><a href="hotels.html">Гостиницы</a></li>
 			</ul>
-			<a><img src="img/logo-sedonamain-.svg" width="138" height="70" alt="Site-logo"></a>
+			<a href="index.html"><img src="img/logo-sedonamain-.svg" width="138" height="70" alt="Site-logo"></a>
 		</nav>
 	</header>
 
@@ -35,29 +35,6 @@
 			<h2 class="visually-hidden">Поиск гостиницы</h2>
 			<p>Зинтересовались?</p>
 			<p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-			<form action="https://echo.htmlacademy.ru/courses" method="post">
-				<fieldset>
-					<legend>Поиск гостиницы в Седоне</legend>
-					<p>
-						<label for="arriving-date">Дата заезда:</label>
-						<input type="text" name="arrival" id="arriving-date" placeholder="24 апреля 2017" required>
-					</p>
-					<p>
-						<label for="departure-date">Дата выезда:</label>
-						<input type="text" name="departure" id="departure-date" placeholder="4 июля 2017">
-					</p>
-					<p>
-						<label for="number-of-adults">Взрослые:</label>
-						<input type="number" name="adults" id="number-of-adults" min="0" value="2" required>
-					</p>
-					<p>
-						<label for="number-of-minors">Дети:</label>
-						<input type="number" name="minors" id="number-of-minors" min="0" value="0">
-					</p>
-					<button type="submit">Найти</button>
-				</fieldset>
-			</form>
-
 		</section>
 
 	</main>
@@ -77,6 +54,34 @@
 		<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41"
 				alt="HtmlAcademy"></a>
 	</footer>
+
+	<section>
+		<h2 class="visually-hidden">Форма подбора гостиницы</h2>
+		<form action="https://echo.htmlacademy.ru/courses" method="post">
+			<h2>Поиск гостиницы в Седоне</h2>
+			<p>
+				<label for="arriving-date">Дата заезда:</label>
+				<input type="text" name="arrival" id="arriving-date" placeholder="24 апреля 2017" required>
+			</p>
+			<p>
+				<label for="departure-date">Дата выезда:</label>
+				<input type="text" name="departure" id="departure-date" placeholder="4 июля 2017">
+			</p>
+			<p>
+				<label for="number-of-adults">Взрослые:</label>
+				<input type="button" value="-">
+				<input type="number" name="adults" id="number-of-adults" min="0" value="2" required>
+				<input type="button" value="+">
+			</p>
+			<p>
+				<label for="number-of-minors">Дети:</label>
+				<input type="button" value="-">
+				<input type="number" name="minors" id="number-of-minors" min="0" value="0">
+				<input type="button" value="+">
+			</p>
+			<button type="submit">Найти</button>
+		</form>
+	</section>
 
 </body>
 
