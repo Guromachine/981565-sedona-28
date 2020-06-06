@@ -1,0 +1,53 @@
+/* Задание цветов */
+
+:root {
+    --white: #FFFFFF; /* Фон и текст*/
+    --grey: #EEEEEE; /* Основной фон */
+    --light-grey: #F2F2F2; /* Поляя и рейтинг */
+    --dark-grey: #333333; /* Основной текст */
+    --black: #000000; /* Заголовки */
+    --blue: #81B3D2; /* Акцентный фон и кнопки*/
+    --brown: #766357; /* Кнопки и акценты */
+}
+
+  /* Подключение pt-sans */
+@font-face {
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('ptsans.woff2') format('woff2'),
+         url('ptsans.woff') format('woff'),
+}
+
+  /* Подключение pt-sans-bold */
+@font-face {
+    font-family: 'PT Sans Bold';
+    font-style: normal;
+    font-weight: 700;
+    src: url('ptsansbold.woff2') format('woff2'),
+        url('ptsansbold.woff') format('woff'),
+}
+
+/* Глобальные стили */
+body {
+    min-width: 1280px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: uppercase;
+    background-color: var(--grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+  img {
+    max-width: 100%;
+    height: auto;
+}
+
