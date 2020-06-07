@@ -1,15 +1,19 @@
 /* Задание цветов */
 
 :root {
-  --white: #ffffff; /* Фон и текст*/
+  --white: #ffffff; /* Фон и текст */
+  --white-transparent: rgba(255, 255, 255, 0.3); /* Полупрозрачный текст */
   --grey: #eeeeee; /* Основной фон */
   --light-grey: #f2f2f2; /* Поляя и рейтинг */
+  --lighter-grey: #666666; /* Поля рейтингов */
   --dark-grey: #333333; /* Основной текст */
   --black: #000000; /* Заголовки */
   --blue: #81b3d2; /* Акцентный фон и кнопки*/
   --dark-blue: #669EC0; /* Кнопки по наведению*/
   --darkest-blue: #5496BD;; /* Кнопки по нажатию*/
   --brown: #766357; /* Кнопки и акценты */
+  --dark-brown: #604E43; /* Кнопки и акценты */
+  --darkest-brown: #503E33; /* Кнопки и акценты */
 }
 
 /* Подключение pt-sans */
@@ -198,7 +202,8 @@ figure.akcent-feature {
     margin: 5px;
 }
 
-.social-icon:hover {
+.social-icon:hover,
+.social-icon:focus {
     background-color: var(--dark-blue);
 }
 
@@ -233,13 +238,21 @@ figure.akcent-feature {
     color: var(--white);
 }
 
+.search-header:hover {
+    background-color: var(--dark-brown);
+}
+
+.search-header:active {
+    background-color: var(--darkest-brown);
+    color: var(--white-transparent);
+}
+
 .search-form input {
     font: inherit;
     text-transform: uppercase;
     color: var(--black);
     background-color: var(--light-grey);
-    border: none;
-    
+    border: none;    
 }
 
 .search-form button{
@@ -254,4 +267,117 @@ button.search-button {
     color: var(--white);
 }
 
+button.search-button:focus,
+button.search-button:hover {
+    font: inherit;
+    background-color: var(--dark-blue);     
+    color: var(--white);
+}
+
+button.search-button:active {
+    font: inherit;
+    background-color: var(--darkest-blue);     
+    color: var(--white-transparent);
+}
+
+
+/* Страница отелей */
+/* Блок результатов */
+
+.search-results {
+    background-color: var(--white);    
+}
+
+.sorting-block {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.search-filters {
+    list-style: none;
+}
+
+.search-filters li:nth-child(1) a {
+    color: var(--blue);
+}
+
+.search-filters li:nth-child(2) a,
+.search-filters li:nth-child(3) a {
+    color: var(--black);
+    opacity: 0.3;
+    border-bottom: 1px dashed var(--blue);
+}
+
+.search-filters li:nth-child(2) a:hover,
+.search-filters li:nth-child(3) a:hover,
+.search-filters li:nth-child(2) a:focus,
+.search-filters li:nth-child(3) a:focus {
+    color: var(--blue);
+    border-bottom: 1px dashed var(--blue);
+}
+
+.search-filters li:nth-child(2) a:active,
+.search-filters li:nth-child(3) a:active {
+    color: var(--black);
+    border-bottom: none;
+}
+
+.list-of-hotels {
+    list-style: none;
+}
+
+.list-of-hotels .tagline {
+    color: var(--black);
+}
+
+.list-of-hotels .tagline:hover,
+.list-of-hotels .tagline:focus {
+    color: var(--blue);
+}
+
+.list-of-hotels .tagline:active {
+    color: var(--black);
+    opacity: 0.3;
+}
+
+/* Кнопки бронирования */
+
+.more-button {
+    font: inherit;
+    font-weight: bold;
+    background-color: var(--blue);     
+    color: var(--white);
+}
+
+.more-button:focus,
+.more-button:hover {
+    background-color: var(--dark-blue);     
+}
+
+.more-button:active {
+    background-color: var(--darkest-blue);   
+    color: var(--white-transparent);
+}
+
+.book-button {
+    font: inherit;
+    font-weight: bold;
+    background-color: var(--brown);     
+    color: var(--white);
+}
+
+.book-button:focus,
+.book-button:hover {
+    background-color: var(--dark-brown);     
+}
+
+.book-button:active {
+    background-color: var(--darkest-brown);   
+    color: var(--white-transparent);
+}
+
+.raiting {
+    background-color: var(--light-grey);  
+    color: var(--lighter-grey);
+}
 
