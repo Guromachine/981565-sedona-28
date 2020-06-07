@@ -1,53 +1,257 @@
 /* Задание цветов */
 
 :root {
-    --white: #FFFFFF; /* Фон и текст*/
-    --grey: #EEEEEE; /* Основной фон */
-    --light-grey: #F2F2F2; /* Поляя и рейтинг */
-    --dark-grey: #333333; /* Основной текст */
-    --black: #000000; /* Заголовки */
-    --blue: #81B3D2; /* Акцентный фон и кнопки*/
-    --brown: #766357; /* Кнопки и акценты */
+  --white: #ffffff; /* Фон и текст*/
+  --grey: #eeeeee; /* Основной фон */
+  --light-grey: #f2f2f2; /* Поляя и рейтинг */
+  --dark-grey: #333333; /* Основной текст */
+  --black: #000000; /* Заголовки */
+  --blue: #81b3d2; /* Акцентный фон и кнопки*/
+  --dark-blue: #669EC0; /* Кнопки по наведению*/
+  --darkest-blue: #5496BD;; /* Кнопки по нажатию*/
+  --brown: #766357; /* Кнопки и акценты */
 }
 
-  /* Подключение pt-sans */
+/* Подключение pt-sans */
 @font-face {
-    font-family: 'PT Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url('ptsans.woff2') format('woff2'),
-         url('ptsans.woff') format('woff'),
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("ptsans.woff2") format("woff2"), 
+    url("ptsans.woff") format("woff");
 }
 
-  /* Подключение pt-sans-bold */
+/* Подключение pt-sans-bold */
 @font-face {
-    font-family: 'PT Sans Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url('ptsansbold.woff2') format('woff2'),
-        url('ptsansbold.woff') format('woff'),
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("ptsansbold.woff2") format("woff2"),
+    url("ptsansbold.woff") format("woff");
 }
 
 /* Глобальные стили */
 body {
-    min-width: 1280px;
-    margin: 0;
-    padding: 0;
-    font-family: "PT Sans", Arial, sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 400;
-    color: var(--black);
-    text-transform: uppercase;
-    background-color: var(--grey);
+  min-width: 1280px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--black);
+  text-transform: uppercase;
+  background-color: var(--grey);
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-  img {
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Основная навигация */
+.main-navigation {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: bold;
+  color: var(--black);
+  background-color: transparent;
+}
+.main-navigation-wrapper {
+  background-color: var(--white);
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: var(--blue);
+}
+
+.site-navigation a:active {
+  color: var(--black);
+  opacity: 0.3;
+}
+
+.main-navigation .current-page {
+  color: var(--brown);
+}
+
+/* Welcome блок  */
+.welcome-part {
+  background-color: var(--white);
+  line-height: 26px;
+  text-align: center;
+}
+
+.welcome-background {
+  text-align: center;
+  background-image: url("../img/main-background-photo.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.tagline {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.common-text {
+    font-size: 14px;
+    color: var(--dark-grey);
+  }
+
+/* Список преимуществ */
+.features {
+  text-align: center;
+  line-height: 21px;
+}
+
+.reasons-list,
+.feature-list {
+  list-style: none;
+}
+
+figure.akcent-feature {
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.akcent-feature p {
+    color: var(--white);
+}
+
+.features h4 {
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.features p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.feature-list {
+  background-color: var(--white);
+}
+
+/* Блок подбора гостиницы */
+.landing {
+  line-height: 24px;
+  text-align: center;
+  background-color: var(--white);
+}
+
+.landing .landing-tagline {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Меню футера */
+.footer-menu {
+    background-color: rgba(255, 255, 255, 0.9);
+    line-height: 26px;
+    color: var(--black);
+}
+
+.footer-menu a {
+    color: var(--black);
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus {
+  color: var(--blue);
+}
+
+.footer-menu a:active {
+    color: var(--black);
+    opacity: 0.3;
+}
+
+.social-links {
+    list-style: none;
+    text-align: center;
+  }
+
+.social-icon {
+    background-color: var(--blue);
+    width: 46px;  
+    height: 48px;  
+    margin: 5px;
+}
+
+.social-icon:hover {
+    background-color: var(--dark-blue);
+}
+
+.social-icon:active {
+    background-color: var(--darkest-blue);
+}
+
+.twitter:active,
+.facebook:active,
+.youtube:active {
+    opacity: 0.3;
+}
+
+ .copyright { 
+    color: var(--black);
+    font-size: 14px;
+  }
+
+/* Попап меню */
+.search {
+    line-height: 26px;
+}
+
+.search-form {
+    font-weight: bold;
+    background-color: var(--white);
+}
+.search-header {
+    background-color: var(--brown);
+    font-weight: bold;
+    font-size: 21px;
+    color: var(--white);
+}
+
+.search-form input {
+    font: inherit;
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: var(--light-grey);
+    border: none;
+    
+}
+
+.search-form button{
+    background-color: var(--light-grey);
+    border: none;
+    text-transform: uppercase;
+}
+
+button.search-button {
+    font: inherit;
+    background-color: var(--blue);     
+    color: var(--white);
+}
+
 
